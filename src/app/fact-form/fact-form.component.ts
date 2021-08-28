@@ -1,15 +1,18 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
+import { FormControl } from '@angular/forms';
 
 @Component({
   selector: 'app-fact-form',
   templateUrl: './fact-form.component.html',
   styleUrls: ['./fact-form.component.css']
 })
-export class FactFormComponent implements OnInit {
+export class FactFormComponent {
 
-  constructor() { }
+  fact = new FormControl('')
 
-  ngOnInit(): void {
+  submitNewFact() {
+    this.fact.setValue('Fun Fact');
+    console.log('log fact')
   }
 
 }
