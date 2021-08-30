@@ -1,5 +1,7 @@
 import { Injectable } from "@angular/core";
-import { HttpClient } from "@angular/common/http";
+import { HttpClient, HttpHeaders } from "@angular/common/http";
+import { FactFormComponent } from './fact-form/fact-form.component';
+
 
 
 @Injectable({
@@ -7,7 +9,15 @@ import { HttpClient } from "@angular/common/http";
 })
 
 export class ApiService {
-    apiUrl: string = 'https://api.fungenerators.com';
+    public createFact(fact: FactFormComponent){}
 
-    constructor(private httpClient: HttpClient){}
+    public updateFact(fact: FactFormComponent){}
+
+    public deleteFact(fact: FactFormComponent){}
+
+    public getFact(fact: FactFormComponent){}
+
+    apiUrl: string = 'https://dad-jokes.p.rapidapi.com';
+
+    
 }

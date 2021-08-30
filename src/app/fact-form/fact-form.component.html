@@ -1,3 +1,15 @@
 <label for='fact'>Fact</label>
-<input id="fact" type="text" [formControl]="fact"/>
-<button (click)= 'submitNewFact()'>submit</button>
+<input id="fact" type="text" [formControl]="fact"/> 
+<p>Setup {{ fact.setup}}</p>
+<p>Punchline {{ fact.punchline }}</p>
+<button (click) = 'submitNewFact()'>submit</button>
+<button (click) = 'getFacts()'>Get fact</button>
+
+<ul *ngIf="facts$ | async as facts else noData">
+    <li *ngFor="let fact of facts">
+        {{fact.setUp}},
+        {{fact.punchLine}}
+    </li> 
+</ul>
+<ng-template #noData>No Data Available</ng-template>
+`})
