@@ -17,7 +17,7 @@ export class ApiService {
 
     public getFact(fact: FactFormComponent){}
 
-    apiUrl: string = 'https://dad-jokes.p.rapidapi.com';
+    apiUrl: string = 'https://v2.jokeapi.dev/joke/Programming?blacklistFlags=nsfw';
 
     
 }
